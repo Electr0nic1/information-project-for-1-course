@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тайны шифра</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header>
+    <h1 class="title">Тайны шифра</h1>
+    <div class="textcols">
+      <div class="textcols__item">
+        <h2 class="cipher"><a href="#1">Шифр Цезаря</a></h2>
+        <p class="textcols__subtitle">— это один из простейших и наиболее известных методов шифрования. Он был назван в
+          честь римского императора Гая Юлия Цезаря, который, считается, использовал этот метод для обеспечения
+          конфиденциальности своей переписки.</p>
+      </div>
+      <div class="textcols__item">
+        <h2 class="cipher"><a href="#2">Шифр двойной перестановки</a></h2>
+        <p class="textcols__subtitle"> является методом шифрования, основанным на перестановке символов в исходном
+          сообщении. Этот шифр обеспечивает более высокий уровень конфиденциальности по сравнению с простыми
+          подстановочными шифрами, такими как шифр Цезаря.</p>
+      </div>
+      <div class="textcols__item">
+        <h2 class="cipher"><a href="#3">Шифр A1Z26 </a></h2>
+        <p class="textcols__subtitle">также известный как числовой шифр или алфавитно-числовой шифр, является простым
+          методом шифрования, в котором каждая буква заменяется числом, соответствующим ее позиции в алфавите.</p>
+      </div>
+    </div>
+    <div class="swiper slider-textcols">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slider__item">
+          <h2 class="cipher"><a href="#1">Шифр Цезаря</a></h2>
+          <p class="textcols__subtitle">— это один из простейших и наиболее известных методов шифрования. Он был назван
+            в
+            честь римского императора Гая Юлия Цезаря, который, считается, использовал этот метод для обеспечения
+            конфиденциальности своей переписки.</p>
+        </div>
+        <div class="swiper-slide">
+          <h2 class="cipher"><a href="#2">Шифр двойной перестановки</a></h2>
+          <p class="textcols__subtitle"> является методом шифрования, основанным на перестановке символов в исходном
+            сообщении. Этот шифр обеспечивает более высокий уровень конфиденциальности по сравнению с простыми
+            подстановочными шифрами, такими как шифр Цезаря.</p>
+        </div>
+        <div class="swiper-slide">
+          <h2 class="cipher"><a href="#3">Шифр A1Z26 </a></h2>
+          <p class="textcols__subtitle">также известный как числовой шифр или алфавитно-числовой шифр, является простым
+            методом шифрования, в котором каждая буква заменяется числом, соответствующим ее позиции в алфавите.</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </header>
+  <main>
+    <div>
+      <h2 class="cipher"><a name="1">Шифр Цезаря</a></h2>
+      <div class="descr">
+        <p class="descr__text">Шифр Цезаря является подстановочным шифром, основанным на сдвиге символов в алфавите.
+          Идея
+          заключается в том, что каждая буква заменяется на другую букву, находящуюся на фиксированном числе позиций
+          вперед или назад в алфавите.
+          Давайте рассмотрим пример. Представим, что мы используем английский алфавит и хотим зашифровать сообщение
+          "HELLO" с помощью шифра Цезаря со сдвигом 3. Сначала мы приводим все буквы к верхнему регистру, чтобы
+          упростить шифрование. Тогда буква "H" будет заменена на "K", буква "E" на "H", буква "L" на "O", и буква "O"
+          на "R". Зашифрованное сообщение будет выглядеть как "KHOOR".</p>
+      </div>
+      <h3 class="cipher">Пример использования шифра Цезаря</h3>
+      <div class="container">
+        <div class="row justify-content-around">
+          <div class="col-md-6">
+            <div id="encrypt-block">
+              <h3>Введите текст: </h3>
+              <textarea name="user-text" id="text-to-work" cols="50" rows="3"></textarea>
+              <br><br>
+              <div class="form-group">
+                <button class="btn btn-primary" id="encrypt-btn">Зашифровать</button>
+                <button class="btn btn-primary" id="decrypt-btn">Дешифровать</button>
+              </div>
+              <h3>Шаг сдвига:</h3>
+              <select name="user_step" id="encrypt-step" size="1">
+                <option>1</option>
+                <option>2</option>
+                <option selected>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3>Результат:</h3>
+            <textarea readonly id="output" cols="50" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div>
+      <h2 class="cipher"><a name="2">Шифр двойной перестановки</a></h2>
+      <div class="descr">
+        <p class="descr__text">Идея шифра двойной перестановки состоит в следующем: сначала текст разбивается на блоки
+          фиксированной длины (обычно квадратной матрицы), а затем символы внутри каждого блока переставляются в
+          соответствии с заданной перестановкой столбцов и перестановкой строк. Таким образом, порядок символов
+          изменяется дважды. Давайте рассмотрим пример. Представим, что у нас есть сообщение "HELLO WORLD" и мы выбираем
+          квадратную матрицу размером 4x4 для разделения текста на блоки:<br>
+
+          H E L L<br>
+          O - W O<br>
+          R L D -<br>
+
+          Предположим, что мы имеем перестановку столбцов "2 4 1 3" и перестановку строк "3 1 4 2". Применяя эти
+          перестановки к символам внутри каждого блока, получаем следующий зашифрованный текст:<br>
+
+          L L H E<br>
+          W O O -<br>
+          D - R L<br>
+
+          Зашифрованное сообщение будет выглядеть как "L L H E W O O - D - R L".</p>
+      </div>
+      <h3 class="cipher">Пример использования шифра двойной перестановки</h3>
+    </div>
+    <div class="container">
+      <div class="row justify-content-around">
+        <div class="col-md-6">
+          <div id="doublePermutation">
+            <div id="inputDataBox">
+              <h3>Введите текст:</h3>
+              <textarea id="inputMessage" maxlength="81" rows="3" cols="50"></textarea>
+            </div>
+            <br><br>
+            <div id="buttonbox">
+              <button id="encryptBtn" onclick="process('encrypt')">Зашифровать</button>
+              <button id="decryptBtn" onclick="process('decrypt')">Дешифровать</button>
+            </div>
+            <div id="keysBox">
+              <h3>Ключи</h3>
+              <div class="keysbox-item">по столбцам: <input value="32145" id="colsKey" size="9" maxlength="9" /></div>
+              <div class="keysbox-item">по строкам: <input value="13245" id="rowsKey" size="9" maxlength="9" /></div> 
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3>Результат:</h3>
+          <textarea id="outputLine" cols="50" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <div>
+      <h2 class="cipher"><a name="3">Шифр A1Я33</a></h2>
+      <div class="descr">
+        <p class="descr__text">Принцип работы шифра A1Z26 (у меня будет вариант этого шифра для русской раскладки) очень
+          прост:
+          каждая буква алфавита заменяется числом от 1 до 33, в зависимости от ее положения в алфавите. Буква "А"
+          заменяется числом 1, буква "Б" - числом 2, и так далее, пока буква "Я" не заменяется числом 33.
+
+          Для шифрования сообщения в шифре A1Z26 каждая буква заменяется соответствующим числом, а результат
+          представляется последовательностью чисел, разделенных пробелами. Например, слово "ПРИВЕТ" будет зашифровано
+          как "16 17 9 3 6 19". </p>
+      </div>
+      <h3 class="cipher">Пример использования шифра A1Z26</h3>
+      <div class="container">
+        <div class="row justify-content-around">
+          <div class="col-md-6">
+            <div id="encrypt-block">
+              <h3 for="message">Введите текст: </h3>
+              <textarea name="user-text" id="message" cols="50" rows="3"></textarea>
+              <br><br>
+              <div class="form-group">
+                <button onclick="encrypt()">Зашифровать</button>
+                <button onclick="decrypt()">Дешифровать</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3>Результат:</h3>
+            <textarea readonly id="result" cols="50" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/script1.js"></script>
+  <script src="js/script2.js"></script>
+  <script src="js/script3.js"></script>
+</body>
+
+</html>
