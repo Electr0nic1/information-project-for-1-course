@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="icon" href="images/icon.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -62,7 +62,7 @@
   </header>
   <main>
     <div>
-      <h2 class="cipher"><a name="1">Шифр Цезаря</a></h2>
+      <h2 class="cipher"><a id="1">Шифр Цезаря</a></h2>
       <div class="descr">
         <p class="descr__text">Шифр Цезаря является подстановочным шифром, основанным на сдвиге символов в алфавите.
           Идея
@@ -77,7 +77,7 @@
       <div class="container">
         <div class="row justify-content-around">
           <div class="col-md-6">
-            <div id="encrypt-block">
+            <div>
               <h3>Введите текст: </h3>
               <textarea name="user-text" id="text-to-work" cols="50" rows="3"></textarea>
               <br><br>
@@ -111,9 +111,8 @@
         </div>
       </div>
     </div>
-    </div>
     <div>
-      <h2 class="cipher"><a name="2">Шифр двойной перестановки</a></h2>
+      <h2 class="cipher"><a id="2">Шифр двойной перестановки</a></h2>
       <div class="descr">
         <p class="descr__text">Идея шифра двойной перестановки состоит в следующем: сначала текст разбивается на блоки
           фиксированной длины (обычно квадратной матрицы), а затем символы внутри каждого блока переставляются в
@@ -151,8 +150,8 @@
             </div>
             <div id="keysBox">
               <h3>Ключи</h3>
-              <div class="keysbox-item">по столбцам: <input value="32145" id="colsKey" size="9" maxlength="9" /></div>
-              <div class="keysbox-item">по строкам: <input value="13245" id="rowsKey" size="9" maxlength="9" /></div> 
+              <div class="keysbox-item">по столбцам: <input value="32145" id="colsKey" size="9" maxlength="9"></div>
+              <div class="keysbox-item">по строкам: <input value="13245" id="rowsKey" size="9" maxlength="9"></div>
 
             </div>
           </div>
@@ -163,10 +162,8 @@
         </div>
       </div>
     </div>
-    </div>
-    </div>
     <div>
-      <h2 class="cipher"><a name="3">Шифр A1Я33</a></h2>
+      <h2 class="cipher"><a id="3">Шифр A1Я33</a></h2>
       <div class="descr">
         <p class="descr__text">Принцип работы шифра A1Z26 (у меня будет вариант этого шифра для русской раскладки) очень
           прост:
@@ -181,8 +178,8 @@
       <div class="container">
         <div class="row justify-content-around">
           <div class="col-md-6">
-            <div id="encrypt-block">
-              <h3 for="message">Введите текст: </h3>
+            <div>
+              <h3>Введите текст: </h3>
               <textarea name="user-text" id="message" cols="50" rows="3"></textarea>
               <br><br>
               <div class="form-group">
